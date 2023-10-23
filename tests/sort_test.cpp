@@ -1,8 +1,16 @@
 #include <gtest/gtest.h>
 #include "defs/definitions.h"
 
+/**
+ * Test fixture definition
+ */
+struct SortTests : public ::testing::Test {
+    void SetUp() override{};
+    void TearDown() override{};
+};
 
-TEST(SortTests, SortPosts)
+
+TEST_F(SortTests, SortPosts)
 {
     // Arrange : prepare data
     auto make_post = [] (uint64_t id, std::string desc, std::string img, uint64_t created) -> Post {

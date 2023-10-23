@@ -12,7 +12,7 @@ std::vector<Post> process_posts(std::vector<std::vector<Post>> matrix) {
     };
 
     std::vector<Post> postList;
-    std::size_t postsSize{0};f
+    std::size_t postsSize{0};
 
     for (auto& posts : matrix) {
         for (const auto& post : posts) {
