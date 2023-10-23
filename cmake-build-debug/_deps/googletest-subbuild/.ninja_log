@@ -1,0 +1,21 @@
+# ninja log v5
+0	8	1696441430254625380	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	971b85f9bdbf98b8
+1639	1647	1696441431894700041	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	e57f79f0ef017eef
+1609	1616	1696441431862698583	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	28bffe372b3bb3a
+0	8	1696441430254625380	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	971b85f9bdbf98b8
+1627	1633	1696441431878699311	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	9e0aab9957562491
+1609	1616	1696441431862698583	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	28bffe372b3bb3a
+8	1604	1696441431850698036	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	f0d439c9030a9c08
+1639	1647	1696441431894700041	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	e57f79f0ef017eef
+1622	1627	1696441431874699129	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	a767464012c61317
+8	1604	1696441431850698036	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	f0d439c9030a9c08
+1627	1633	1696441431878699311	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	9e0aab9957562491
+1616	1621	1696441431870698946	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	614498e66a1676c8
+1639	1647	1696441431894700041	CMakeFiles/googletest-populate-complete	e57f79f0ef017eef
+1604	1609	1696441431854698218	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	12c0ff6750215ed8
+1616	1621	1696441431870698946	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	614498e66a1676c8
+1633	1639	1696441431886699675	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f48433a68ede7dd7
+1639	1647	1696441431894700041	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	e57f79f0ef017eef
+1633	1639	1696441431886699675	/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f48433a68ede7dd7
+1604	1609	1696441431854698218	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	12c0ff6750215ed8
+1622	1627	1696441431874699129	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	a767464012c61317
