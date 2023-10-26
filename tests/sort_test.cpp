@@ -1,10 +1,12 @@
 #include <gtest/gtest.h>
 #include "defs/definitions.h"
 
+using namespace ::testing;
+
 /**
  * Test fixture definition
  */
-struct SortTests : public ::testing::Test {
+struct SortTests : public Test {
     void SetUp() override{};
     void TearDown() override{};
 };

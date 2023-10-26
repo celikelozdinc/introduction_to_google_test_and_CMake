@@ -7,7 +7,7 @@ project(scorp_interview
 
 set(CMAKE_CXX_STANDARD 17)
 
-enable_testing()
-
 add_subdirectory(src)
+
+enable_testing()
 add_subdirectory(tests)

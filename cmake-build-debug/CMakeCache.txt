@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//DEFAULT
+BUILD_FAKER_TESTS:BOOL=ON
+
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
@@ -279,6 +282,10 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Builds targets with code coverage instrumentation. (Requires
+// GCC or Clang)
+CODE_COVERAGE:BOOL=OFF
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/home/niyazi/scorp_interview/cmake-build-debug/_deps
 
@@ -290,14 +297,85 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 FETCHCONTENT_QUIET:BOOL=ON
 
 //When not empty, overrides where to find pre-populated content
+// for Faker
+FETCHCONTENT_SOURCE_DIR_FAKER:PATH=
+
+//When not empty, overrides where to find pre-populated content
 // for googletest
 FETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=
 
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
+//Enables UPDATE_DISCONNECTED behavior just for population of Faker
+FETCHCONTENT_UPDATES_DISCONNECTED_FAKER:BOOL=OFF
+
 //Enables UPDATE_DISCONNECTED behavior just for population of googletest
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
+
+//Value Computed by CMake
+FMT_BINARY_DIR:STATIC=/home/niyazi/scorp_interview/cmake-build-debug/_deps/faker-build/externals/fmt
+
+//Installation directory for cmake files, a relative path that
+// will be joined with /usr/local or an absolute path.
+FMT_CMAKE_DIR:STRING=lib/cmake/fmt
+
+//Generate the cuda-test target.
+FMT_CUDA_TEST:BOOL=OFF
+
+//Debug library postfix.
+FMT_DEBUG_POSTFIX:STRING=d
+
+//Generate the doc target.
+FMT_DOC:BOOL=OFF
+
+//Generate the fuzz target.
+FMT_FUZZ:BOOL=OFF
+
+//Installation directory for include files, a relative path that
+// will be joined with /usr/local or an absolute path.
+FMT_INC_DIR:STRING=include
+
+//Generate the install target.
+FMT_INSTALL:BOOL=ON
+
+//Value Computed by CMake
+FMT_IS_TOP_LEVEL:STATIC=OFF
+
+//Installation directory for libraries, a relative path that will
+// be joined to /usr/local or an absolute path.
+FMT_LIB_DIR:STRING=lib
+
+//Build a module instead of a traditional library.
+FMT_MODULE:BOOL=OFF
+
+//Include core requiring OS (Windows/Posix) 
+FMT_OS:BOOL=ON
+
+//Enable extra warnings and expensive tests.
+FMT_PEDANTIC:BOOL=OFF
+
+//Installation directory for pkgconfig (.pc) files, a relative
+// path that will be joined with /usr/local or an absolute path.
+FMT_PKGCONFIG_DIR:STRING=lib/pkgconfig
+
+//Value Computed by CMake
+FMT_SOURCE_DIR:STATIC=/home/niyazi/scorp_interview/cmake-build-debug/_deps/faker-src/externals/fmt
+
+//Expose headers with marking them as system.
+FMT_SYSTEM_HEADERS:BOOL=OFF
+
+//Generate the test target.
+FMT_TEST:BOOL=OFF
+
+//Halt the compilation with an error on compiler warnings.
+FMT_WERROR:BOOL=OFF
+
+//Path to a program.
+GENHTML_PATH:FILEPATH=GENHTML_PATH-NOTFOUND
+
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
 //Use Abseil and RE2. Requires Abseil and RE2 to be separately
 // added to the build.
@@ -306,6 +384,24 @@ GTEST_HAS_ABSL:BOOL=OFF
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
+
+//Path to a program.
+LCOV_PATH:FILEPATH=LCOV_PATH-NOTFOUND
+
+//Path to a program.
+LLVM_COV_PATH:FILEPATH=LLVM_COV_PATH-NOTFOUND
+
+//Path to a program.
+LLVM_PROFDATA_PATH:FILEPATH=LLVM_PROFDATA_PATH-NOTFOUND
+
+//Value Computed by CMake
+faker-cxx_BINARY_DIR:STATIC=/home/niyazi/scorp_interview/cmake-build-debug/_deps/faker-build
+
+//Value Computed by CMake
+faker-cxx_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+faker-cxx_SOURCE_DIR:STATIC=/home/niyazi/scorp_interview/cmake-build-debug/_deps/faker-src
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/niyazi/scorp_interview/cmake-build-debug/_deps/googletest-build/googlemock
@@ -553,12 +649,39 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.12()]
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.12()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: GENHTML_PATH
+GENHTML_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+//Test HAS_NULLPTR_WARNING
+HAS_NULLPTR_WARNING:INTERNAL=1
+//ADVANCED property for variable: LCOV_PATH
+LCOV_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LLVM_COV_PATH
+LLVM_COV_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LLVM_PROFDATA_PATH
+LLVM_PROFDATA_PATH-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.10
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-x86_64-linux-gnu;abi3;/usr/lib/python3.10;/usr/lib/python3.10;/usr/local/lib/python3.10/dist-packages;/usr/local/lib/python3.10/dist-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=b91b4035ecb3bb3f5760d35922531bcd
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
+//NumPy reason failure
+_Python3_NumPy_REASON_FAILURE:INTERNAL=
 //Compiler reason failure
 _Python_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure

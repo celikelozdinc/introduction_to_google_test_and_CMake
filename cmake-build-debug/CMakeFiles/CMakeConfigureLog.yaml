@@ -494,3 +494,34 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "cmake-build-debug/_deps/faker-src/externals/fmt/CMakeLists.txt:237 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAS_NULLPTR_WARNING"
+    directories:
+      source: "/home/niyazi/scorp_interview/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9yRzjF"
+      binary: "/home/niyazi/scorp_interview/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9yRzjF"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -Wpedantic -Wconversion -Wformat -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/niyazi/scorp_interview/cmake-build-debug/_deps/faker-src/externals/fmt/support/cmake"
+    buildResult:
+      variable: "HAS_NULLPTR_WARNING"
+      cached: true
+      stdout: |
+        Change Dir: /home/niyazi/scorp_interview/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9yRzjF
+        
+        Run Build Command(s):/snap/clion/250/bin/ninja/linux/x64/ninja -v cmTC_f98b7 && [1/2] /usr/bin/clang++ -DHAS_NULLPTR_WARNING  -Wall -Wextra -Wpedantic -Wconversion -Wformat -Werror  -std=gnu++20 -fcolor-diagnostics   -Wzero-as-null-pointer-constant -MD -MT CMakeFiles/cmTC_f98b7.dir/src.cxx.o -MF CMakeFiles/cmTC_f98b7.dir/src.cxx.o.d -o CMakeFiles/cmTC_f98b7.dir/src.cxx.o -c /home/niyazi/scorp_interview/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-9yRzjF/src.cxx
+        [2/2] : && /usr/bin/clang++ -Wall -Wextra -Wpedantic -Wconversion -Wformat -Werror  CMakeFiles/cmTC_f98b7.dir/src.cxx.o -o cmTC_f98b7   && :
+        
+      exitCode: 0
+...
